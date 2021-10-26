@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/blog_nav_graph"
+    app:startDestination="@id/newBlogFragment">
+
+    <fragment
+        android:id="@+id/newBlogFragment"
+        android:name="com.example.blogapp.ui.fragments.NewBlogFragment"
+        android:label="NewBlogFragment" >
+        <action
+            android:id="@+id/action_newBlogFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/savedBlogFragment"
+        android:name="com.example.blogapp.ui.fragments.SavedBlogFragment"
+        android:label="SavedBlogFragment" >
+        <action
+            android:id="@+id/action_savedBlogFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchBlogFragment"
+        android:name="com.example.blogapp.ui.fragments.SearchBlogFragment"
+        android:label="SearchBlogFragment" >
+        <action
+            android:id="@+id/action_searchBlogFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.blogapp.ui.fragments.ArticleFragment"
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.blogapp.models.Article" />
+    </fragment>
+</navigation>
